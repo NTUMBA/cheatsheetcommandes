@@ -140,6 +140,20 @@ NB: Vérifiez que vous vous trouvez bien dans le répertoire dans lequel vous so
 </ul>
 </p>
   <h2>grep</h2>
+  <p>Pour Global Regular Expression Print, elle sert à Recherche une chaîne de caractères
+  dans des fichiers (ou depuis la console si aucun fichier n'est indiqué); elle est régulièrement
+  utilisé en filtre avec d'autres commandes.
+  <ul>
+  <li>-c : Retourne le nombre de lignes au lieu des lignes elles mêmes</li>
+  <li>-n : Retourne les lignes préfixées par leur numéro</li>
+  <li>-i : Insensible à la casse</li>
+  <li>-r : Recherche récursivement dans tous les sous-répertoires ; On peut utiliser la commande rgrep</li>
+  <li>-G : Recherche en utilisant une expression rationnelle basique (option par défaut)</li>
+  <li>-E : Recherche en utilisant une expression rationnelle étendue ; On peut utiliser la commande egrep</li>
+  <li>-F : Recherche en utilisant une chaîne fixe ; On peut utiliser la commande fgrep</li>
+</ul>
+Ex.: grep -n montexte monfichier = Retourne toutes les lignes ainsi que leur numéro où montexte apparait dans monfichier
+  </p>
   <h2>locate</h2>
   <h2>cat</h2>
   <h2>more</h2>
