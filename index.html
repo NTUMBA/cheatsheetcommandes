@@ -172,6 +172,19 @@ Ex.: grep -n montexte monfichier = Retourne toutes les lignes ainsi que leur num
   Ex.: more -sf mon_Fichier = Affiche mon_Fichier page par page en concaténant les lignes vides sans couper les lignes longues.
   </p>
   <h2>less</h2>
+  <p>Elle Affiche un fichier en permettant la navigation, ainsi que certaines possibilités de vi( par ex: la recherche)
+    <ul>
+  <li>-e ou -E : Quitte automatiquement la deuxième fois que la fin du fichier est atteinte, ou dès la première fois avec -E.
+  <li>-F : Quitte automatiquement si le fichier tient sur le terminal.
+  <li>-m ou -M : Prompt long a la more.
+  <li>-r ou -R : Autorise les caractères spéciaux.
+  <li>-x : Règle la taille des tabulations.
+  <li>-~ : ne comble pas les lignes vides par des ~</li>
+    </ul>
+Ex.: ess -Emr~ mon_Fichier = Afficher mon_Fichier page par page avec un prompt long (affichage du pourcentage du fichier parcouru)
+en affichant les caractères spéciaux sans combler les lignes vides par des ~
+
+  </p>
   <h2>id</h2>
   <h1>Les Commandes Système</h1>
   <h2>sudo</h2>
