@@ -22,7 +22,24 @@
 attribuer deux styles différents-->
   <h1>Les Commandes de Base</h1>
   <h2>man</h2>
+man pour page de manuel (du système), chaque argument lié à cette commande consiste à un programme,
+d'un utilitaire, d'une fonction ou d'un fichier spécial.
+ex.: man git
+Il s'affichera des information utiles à propos du logiciel GIT.
+Ensuite, pour quitter la page, on tape: q
   <h2>ls</h2>
+  Pour list segment
+  Il permet d'afficher le contennu du répectoire courant
+  Il possède 4 attributs:
+  <ul>
+    <li>-l : Permet un affichage détaillé du répertoire (permissions d'accès, le nombre de liens physiques,
+       le nom du propriétaire et du groupe, la taille en octets, et l'horodatage)</li>
+    <li>-h : Associé avec -l affiche la taille des fichiers avec un suffixe correspondant à l'unité (K, M, G)</li>
+    <li>-a : Permet l'affichage des fichiers et répertoires cachés (ceux qui commencent par un . (point))</li>
+    <li>-lct : Permet de trier les fichiers et répertoires par date de modification décroissante</li>
+  </ul>
+  ex.: ls -a, affiche tous les fichiers et répertoires y compris les cachés du répertoire courant
+Similaire à la commande dir
   <h2>cd</h2>
   <h2>mv</h2>
   <h2>cp</h2>
