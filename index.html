@@ -57,10 +57,11 @@ Similaire à la commande dir</p><!--Never forget to put everything inside tag!!!
     <li>-i : Idem mais avec demande confirmation avant d'écraser</li>
     <li>-u : N'écrase pas le fichier de destination si celui-ci est plus récent</li>
     </ul>
+    Ex.:
     <ul>
-    <li>ex.: mv mon_Fichier unRep/ = Déplace mon_Fichier dans le répertoire un_Rep</li>
-    <li>ex.: mv un_Rep/mon_Fichier = Déplace le fichier mon_Fichier du répertoire un_Rep là où on se trouve</li>
-    <li>ex.: mv unRep monRep = Renomme unRep en monRep</li>
+    <li>mv mon_Fichier unRep/ = Déplace mon_Fichier dans le répertoire un_Rep</li>
+    <li>mv un_Rep/mon_Fichier = Déplace le fichier mon_Fichier du répertoire un_Rep là où on se trouve</li>
+    <li>mv unRep monRep = Renomme unRep en monRep</li>
     </ul>
   </p>
   <h2>cp</h2>
@@ -73,7 +74,7 @@ Similaire à la commande dir</p><!--Never forget to put everything inside tag!!!
     <li>-u : Ne copie que les fichiers plus récents ou qui n'existent pas</li>
     <li>-v : permet de suivre les copies réalisées en temps réel </li>
   </ul>
-
+Ex.:
   <ul>
     <li> cp mon_Fichier sous_rep/ = Copie mon_Fichier dans sous_rep</li>
     <li>cp -r mon_Rep/ nom_autre_Rep/ = Copie le répertoire mon_Rep (et ses éventuels sous-répertoires) vers nom_autre_Rep en le créant /mon_Rep s'il n'existe pas</li>
@@ -97,7 +98,7 @@ Similaire à la commande dir</p><!--Never forget to put everything inside tag!!!
   <h2>rmdir</h2>
   <p>Pour ReMoveDIRectory, elle permet de supprimer les repectoires VIDES. Une des options:
     -p : Supprime les répertoires parents s'ils deviennent vides.
-    Et un ex.: rmdir LeRep = Supprime le répertoire LeRep
+    Et un ex.: rmdir Le_Rep = Supprime le répertoire Le_Rep
   </p>
   <h2>top</h2>
   <p> Cette commande montre la charge CPU. Elle montre la charge CPU
@@ -174,11 +175,11 @@ Ex.: grep -n montexte monfichier = Retourne toutes les lignes ainsi que leur num
   <h2>less</h2>
   <p>Elle Affiche un fichier en permettant la navigation, ainsi que certaines possibilités de vi( par ex: la recherche)
     <ul>
-  <li>-e ou -E : Quitte automatiquement la deuxième fois que la fin du fichier est atteinte, ou dès la première fois avec -E.
-  <li>-F : Quitte automatiquement si le fichier tient sur le terminal.
-  <li>-m ou -M : Prompt long a la more.
-  <li>-r ou -R : Autorise les caractères spéciaux.
-  <li>-x : Règle la taille des tabulations.
+  <li>-e ou -E : Quitte automatiquement la deuxième fois que la fin du fichier est atteinte, ou dès la première fois avec -E</li>
+  <li>-F : Quitte automatiquement si le fichier tient sur le terminal</li>
+  <li>-m ou -M : Prompt long a la more</li>
+  <li>-r ou -R : Autorise les caractères spéciaux</li>
+  <li>-x : Règle la taille des tabulations</li>
   <li>-~ : ne comble pas les lignes vides par des ~</li>
     </ul>
 Ex.: ess -Emr~ mon_Fichier = Afficher mon_Fichier page par page avec un prompt long (affichage du pourcentage du fichier parcouru)
@@ -191,31 +192,286 @@ en affichant les caractères spéciaux sans combler les lignes vides par des ~
   </p>
   <h1>Les Commandes Système</h1>
   <h2>sudo</h2>
+  <p>
+  Vient de Substitute User - DO, grâce à elle on s'octroie des privilèges (des dérogations) qui vont nous permmettre d'exécuter des tâches
+  en tant qu'un autre utilisateur.
+  <ul>
+    <li>-s : Importe les variables d'environnement du shell</li>
+    <li>-k : Lorsque l'on utilise sudo, il garde en mémoire le mot de passe ; cette option déconnecte l'utilisateur et forcera à redemander un mot de passe si sudo est exécuté avant le timeout défini.</li>
+  </ul>
+  Ex.: sudo reboot = Lancee la commande reboot avec les droits de l'utilisateur root
+  </p>
   <h2>apt-get</h2>
+  <p>
+    Avanced Package Tool - GET, cette commande permet l'installation et le retrait de packages en tenant compte des dépendances ainsi que le téléchargement des packages s'ils sont sur une source réseau.
+Avec comme commandes associées:
+  <ul>
+  <li>update : Met à jour la liste des packages disponibles en fonction des sources fournies</li>
+  <li>upgrade : Met à jour tous les packages déjà installés</li>
+  <li>dist-upgrade : Pareil que précédent mais permet également de passer à une version n+1 simplement de la distribution</li>
+  <li>install : Installe un ou plusieurs packages</li>
+  <li>remove : Supprime un ou plusieurs packages</li>
+  <li>clean : Efface du disque dur les packages téléchargés </li>
+</ul>
+et comme options:
+<ul>
+    <li>-f : Utilisée avec install ou remove cette option permet de réparer un système dont les dépendances sont défectueuses</li>
+    <li>-m : Ignore les paquets manquants (a éviter si on ne sait pas exactement ce que l'on fait)</li>
+    <li>-s : Fait une simulation des actions à mener sans rien toucher au système</li>
+    <li>-y : Répond automatiquement oui à toutes les questions</li>
+    <li>-u : Affiche les paquets mis à jour</li>
+    <li>–purge : A utiliser conjointement avec remove pour supprimer tout ce qui peut l'être (fichiers de configuration par exemple)</li>
+    <li>–reinstall : Réinstaller les paquets avec leur version plus récente</li>
+</ul>
+Ex.:
+<ul>
+    <li>apt-get update = Met à jour la liste de packages</li>
+    <li>apt-get upgrade = Met à jour tous les packages installés</li>
+    <li>apt-get install package1 package2 = Installe package1 et package2</li>
+    <li>apt-get –purge remove package3 = Supprime package3 ainsi que tous les fichiers de configuration</li>
+</ul>
+  </p>
   <h2>apt-cache</h2>
+  <p>
+    Vise à gérer des paquets et manipulation du cache par APT
+Associée aux commandes:
+<ul>
+   <li>show : Affiche les informations associées au paquet</li>
+  <li> search : Recherche l'expression régulière donnée sur tous les paquets disponibles</li>
+   <li>depends : Affiche les paquets dépendants du paquet donné</li>
+   <li>rdepends : Affiche les paquets qui ont en dépendance le paquet donné</li>
+   <li>madison : Affiche le dépôt dans lequel se trouve le paquet donné</li>
+</ul>
+et options:
+<ul>
+    <li>-f : Affiche tous les champs d'information</li>
+    <li>-n : Ne recherche que dans les noms des paquets</li>
+</ul>
+Ex.:
+<ul>
+    <li>apt-cache show xeyes = Affiche les informations associée au paquet xeyes</li>
+    <li>apt-cache depends ubuntu-desktop = Affiche toutes les dépendances du paquet ubuntu-desktop</li>
+    <li>apt-cache rdepends gnome-about = Affiche tous les paquets dont dépend le paquet gnome-about</li>
+    <li>apt-cache search -n irc = Recherche et affiche tous les paquets ayant dans leur nom irc</li>
+    <li>apt-cache madison brasero = Indique le dépôt fournissant le paquet brasero</li>
+</ul>
+  </p>
   <h2>chmod</h2>
+  <p>
+Qui vient de CHange MODe
+Modifie les permissions d'accès à un fichier ou à un répertoire.
+Type d'autorisations (une autorisation d'exécution sur un répertoire autorise son ouverture) :
+<ul>
+    <li>+ : Ajoute une permission</li>
+    <li>- : Enlève une permission</li>
+    <li>= : Autorise uniquement l'autorisation indiquée</li>
+    <li>r : Lecture ; Valeur octale 4</li>
+    <li>w : Ecriture ; Valeur octale 2</li>
+    <li>x : Execution ; Valeur octale 1</li>
+    <li>s : Utilise les droits du propriétaire ou du groupe lors de l'exécution</li>
+    <li>u : Propriétaire du fichier</li>
+    <li>g : Groupe propriétaire du fichier</li>
+    <li>o : Tous les autres utilisateurs</li>
+</ul>
+Comme options:
+<ul>
+    <li>-R : Récursif, modifie les autorisations d'un répertoire et tout ce qu'il contient</li>
+    <li>-c : Ne montrer que les fichiers ayant été réellement modifiés</li>
+    <li>-f : Ne pas afficher les messages d'erreur</li>
+ </ul>
+Ex.:
+<ul>
+    <li>chmod ugo+x mon_Rep = Ajoute l'exécution (ouverture) du répertoire mon_Rep à tous (propriétaire, groupe, autres)</li>
+    <li>chmod go-wx mon_Rep = Supprime l'autorisation d'écriture et l'exécution de monRep au groupe et aux autres</li>
+    <li>chmod u=rw,go=r Mon_Fichier = Fixe l'autorisation de lecture et d'écriture au propriétaire de MonFichier et une autorisation de lecture au groupe et aux autres</li>
+    <li>chmod 644 Mon_Fichier = Exactement la même chose que ci-dessus mais en utilisant les valeurs octales (Nota : 6 = 4+2 = lecture + écriture)</li>
+    <li>chmod u=rw,g=r,o= Mon_Fichier : Fixe l'autorisation d'ouverture et de lecture de MonFichier au propriétaire, uniquement la lecture au groupe et interdit tout accès aux autres</li>
+    <li>chmod 640 Mon_Fichier = Exactement la même chose que ci-dessus mais en utilisant les valeurs octales</li>
+</ul>
+  </p>
   <h2>chown</h2>
+<p>CHange OWNer: Change le propriétaire et le groupe propriétaire d'un fichier
+Avec comme options les plus fréquentes :-R : Modifie récursivement un répertoire et tout ce qu'il contient
+Ex.:
+<ul>
+    <li>chown autre_Utilisateur Mon_Fichier = Change le propriétaire de Mon_Fichier en autre_Utilisateur</li>
+    <li>chown -R lui:nous mon_Rep = Change le propriétaire en lui et le groupe propriétaire en nous du répertoire mon_Rep ainsi que tout ce qu'il contient</li>
+</ul>
+</p>
   <h2>chgrp</h2>
+  <p>
+Autrement, CHange GRouPe. Il sert à changer le groupe propriétaire d'un fichier.
+Ses options les plus récurrentes
+<ul>
+    <li>-R : Change récursivement un répertoire et tout ce qu'il contient</li>
+    <li>-h : Change le groupe propriétaire d'un lien symbolique et seulement lui (ne touche pas à la destination du lien)</li>
+    <li>-L : Si fournie avec R , change le groupe propriétaire d'un répertoire et des fichiers qu'il contient s'il est pointé par un lien symbolique rencontré lors de l'exécution</li>
+</ul>
+    Ex.:
+    <li>chgrp un_Groupe Mon_Fichier = Change le groupe propriétaire du fichier Mon_Fichier en un_Groupe</li>
+    <li>chgrp -R un_Groupe mon_Rep = Change le groupe propriétaire du répertoire mon_Rep ainsi que tout ce qu'il contient en un_Groupe</li>
+</ul>
+  </p>
   <h2>free</h2>
-  <h2>mount</h2>
-  <h2>unmount</h2>
+  <p>
+Elle sert à indiquer la mémoire disponible (libre) et donc aussi utilisée du système
+Avec comme options associées:
+<ul>
+   <li>-b : Affiche la mémoire en bytes</li>
+   <li>-k : Affiche la mémoire en kilo octet</li>
+   <li>-m : Affiche la mémoire en méga octet</li>
+   <li>-g : Affiche la mémoire en giga octet</li>
+   <li>-s : Spécifie le délai de réaffichage de la mémoire</li>
+   <li>-t : Affiche la ligne des totaux</li>
+</ul>
+Ex.: free -m -s 5, si l'on veut afficher la mémoire du système en méga octet toutes les 5 secondes
+</p>
   <h2>ps</h2>
-  <h2>kill/killall</h2>
+  <p>
+Pour Processes Snapshot, elle sert à afficher les processus en cours
+Avec comme options associées:
+    <ul>
+        <li>-u : Affiche les processus de l'utilisateur qui exécute la commande</li>
+        <li>-au : Affiche les processus de tous les utilisateurs</li>
+        <li>-aux : Affiche l'intégralité des processus du système. Équivalent à ps -A</li>
+        <li>-faux : Affiche tous les processus du système en les regroupant par enchaînement d'exécution</li>
+</ul>
+Ex. :
+    <ul>
+        <li>ps -u = Tous les processus de l'utilisateur courant</li>
+        <li>ps -aux = Tous les processus en cours</li>
+    </ul>
+    pensez à utiliser avec grep pour limiter la liste : ps -aux | grep tuxpaint ne vous retournera que les processus contenant tuxpaint
+  </p>
   <h2>shutdown</h2>
+  <p>
+Permet d'éteindre ou relancer la machine au boût d'un temps déterminé (requis : on peut mettre now pour éteindre immédiatement). Les nouvelles connexions seront bloquées quelques minutes avant l'extinction et les utilisateurs connectés sont prévenus à l'avance.
+Avec comme options:
+   <li>-r : pour relancer (reboot)</li>
+   <li>-P : pour éteindre</li>
+Ex.:
+<ul>
+   <li>shutdown -r now : reboot immédiat</li>
+   <li>shutdown -P now : extinction immédiate</li>
+</ul>
+</p>
   <h2>passwd</h2>
+<p>
+Cette commande permet modifier le mot de passe d'un utilisateur.
+Elle est souvent associée à l'option:
+-S : Affiche l'état d'un compte (nom du compte, bloqué (L), si l'utilisateur
+n'a pas de mot de passe (NP) ou a un mot de passe utilisable (P), date de dernière
+modification du mot de passe, durée minimum avant modification, durée maximum de validité,
+durée d'avertissement, durée d'inactivité autorisée)
+A moins d'être adminsitrateur système ou réseau (auquel cas pourquoi lisez-vous ces lignes ;-) ?)
+cette commande s'utilise généralement sans option.
+Ex.: passwd =Demande à changer le mot de passe
+</p>
   <h2>groups</h2>
+  <p>Affiche les groupes auxquels appartient un utilisateur
+Ex.: groups: Affiche la liste des groupes auxquels appartient l'utilisateur ayant tapé la commande.
+     groups Mon_Utilisateur = Affiche tous les groupes auxquels appartient l'utilisateur Mon_Utilisateur
+   </p>
   <h2>adduser</h2>
+  <p>
+  Pour Ajouter un utilisateur, ou un groupe, au système.
+Ses Options les plus fréquentes :
+<ul>
+   <li>–disabled-login : Empêche l'utilisateur de se connecter</li>
+   <li>–disabled-password : Un peu comme </del>disabled-login sauf qu'il est possible de se connecter via une clé RSA SSH, pratique pour créer un utilisateur qui ne se connectera que via SSH</li>
+   <li>–system : Crée un utilisateur système</li>
+   <li>–group : Avec –system crée un groupe avec le même ID que l'utilisateur système, sans un groupe avec le nom donné sera créé</li>
+   <li>–home : Permet de fixer le répertoire HOME de l'utilisateur</li>
+   <li>–no-create-home : Ne crée pas de répertoire HOME</li>
+</ul>
+Ex.:
+<ul>
+   <li>adduser MonUtilisateur = Crée l'utilisateur MonUtilisateur</li>
+   <li>adduser –disabled-password –no-create-home UtilisateurSSH = Crée un utilisateur UtilisateurSSH sans mot de passe qui ne pourra pas se connecter directement sur la machine et sans lui créer de répertoire home</li>
+   <li>adduser –disabled-password –home /home/UtilisateurSSH UtilisateurSSH = Même chose qu'au-dessus sauf qu'on lui donne le même répertoire HOME qu'à l'utilisateur UtilisateurSSH créé en premier</li>
+   <li>adduser UtilisateurSSH fuse = Ajoute l'utilisateur UtilisateurSSH (crée préalablement) dans le groupe "fuse", on peut faire aussi un: gpasswd -a $USER fuse</li>
+   <li>adduser Nouvel_Utilisateur ––in_group users = Crée l'utilisateur Nouvel_Utilisateur et l'ajoute au groupe "users"</li>
+   <li>adduser Nouvel_Utilisateur ––in_group users ––uid 1000 = Crée l'utilisateur Nouvel_Utilisateur avec l'uid 1000 et l'ajoute au groupe "users" (utile pour écrire sur une partition ext2/3/4 externe au systeme ou un dossier appartenant au uid 1000)</li>
+</ul>
+</p>
   <h2>deluser</h2>
+  <p>
+Pour DELete USER, elle sert à supprimer un utilisateur du système.
+Les options associées:
+<ul>
+    <li>–system : Ne supprime l'utilisateur que si c'est un utilisateur système</li>
+    <li>–remove-home : Supprime l'utilisateur ainsi que son répertoire dans le home</li>
+</ul>
+Ex.:
+<ul>
+    <li>deluser UtilisateurSSH</li>
+    <li>Supprime l'utilisateur UtilisateurSSH</li>
+    <li>deluser –remove-home NouvelUtilisateur</li>
+    <li>Supprime l'utilisateur NouvelUtilisateur ainsi que le répertoire /home/NouvelUtilisateur</li>
+    <li>deluser NouvelUtilisateur users</li>
+    <li>Supprime l'utilisateur NouvelUtilisateur du groupe "users"</li>
+</ul>
+</p>
   <h2>df</h2>
+<p>
+Disk Free, pour afficher la quantité d'espace disque utilisé par les systèmes de fichiers.
+Les options récurrentes:
+<ul>
+    <li>-a : Affiche tous les systèmes de fichiers, y compris ceux de 0 blocs (par exemple : proc, sysfs, usbfs et tmpfs)</li>
+    <li>-h : Ajoute aux valeur un M pour mébioctet (2^20 octets) pour que ce soit plus lisible</li>
+    <li>-H : Pareil que -h mais en mégaoctets (10^6 octets)</li>
+    <li>-T : Affiche le type du système de fichier</li>
+</ul>
+Ex.:
+<ul>
+    <li>df -h = Affiche la quantité d'espace disque utilisé en mébioctets par les systèmes de fichiers</Li>
+    <li>df /home = Affiche la quantité d'espace disque utilisé par la partition /home (si elle existe)</li>
+    <li>df -T -h = Affiche le nom des partitions et leur point de montage</li>
+</ul>
+</p>
   <h2>fdisk</h2>
+  <p>
+ ce qui veut dire manipulateur de partitions
+ Modifie la table de partition des disques, son utilisation est auto-documentée avec la commande m
+ L'option la plus fréquente: -l Informations détaillées des disques
+ Ex.:
+<ul>
+     <li>sudo fdisk /dev/sda</li>
+     <li>sudo fdisk -l</li>
+   </ul>
+  </p>
   <h2>du</h2>
+  <p>
+Pour Disk Usage,elle sert à afficher l'espace disque utilisé par les fichiers et/ou les répertoires
+Les options les plus fréquentes :
+<ul>
+    <li>-a : Afficher pour tous les fichiers et pas uniquement les répertoires</li>
+    <li>-s : Afficher le total sans lister les différents fichiers</li>
+    <li>-c : Faire un total après avoir tout affiché</li>
+    <li>-h : Ajoute un suffixe correspondant à l'unité (K, M, G)</li>
+    <li>-H : Idem que -h mais en puissance de 10</li>
+</ul>
+Ex.:
+<ul>
+    <li>du -hs dir = Affiche la taille du répertoire dir ou du répertoire courant si dir est omis</li>
+    <li>du -ch /home/MonUtilisateur = Affiche la taille des répertoires contenus dans /home/MonUtilisateur en utilisant un suffixe puis le total</li>
+    <li>du -sm ~/Images/*.jpg = Affiche la taille totale des fichiers JPEG contenus dans le répertoire ~/Images</li>
+</ul>
+  </p>
   <h2>uptime</h2>
-  <h2>lspci</h2>
-  <h2>lsusb</h2>
-  <h2>unama</h2>
-  <h2>usermod</h2>
+  <p>
+  Cette commande sert à indiquer depuis quand le système fonctionne.
+  Ex.: uptime = Affiche l'heure actuelle, la durée depuis laquelle le système fonctionne, le nombre d'utilisateurs actuellement connectés, et la charge système moyenne ; Commande de geek par excellence :-) qui ne sert pas à grand chose pour un utilisateur lambda, mais utile pour un administrateur.
+</p>
   <h2>file</h2>
+  <p>Cette commande permet d'identifier le type de fichier grâce à son MIME en utilisant
+  les tests magic sur le contenu des fichiers (en général les premiers bits). Les tests sont
+  fournis par le paquet libmagic1.
+</p>
   <h1>Bibliographie</h1>
-
+<ol>
+  <li>ubuntu-fr,https://doc.ubuntu-fr.org/tutoriel/console_commandes_de_base</li>
+  <li>Command Line Cheat Sheet, https://www.git-tower.com</li>
+</ol>
 </body>
 </html>
