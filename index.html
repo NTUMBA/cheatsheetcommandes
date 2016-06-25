@@ -244,6 +244,7 @@ La commande id affiche les informations utilisateur et de groupe pour un utilisa
 </div>
 <div class="syst">
 <h1>Les Commandes Système</h1>
+<div class="sudo">
 <h2>sudo</h2>
 <p>
 Vient de Substitute User - DO, grâce à elle on s'octroie des privilèges (des dérogations) qui vont nous permmettre  <br>
@@ -255,6 +256,8 @@ d'exécuter des tâches en tant qu'un autre utilisateur.
 </ul>
 Ex.: sudo reboot = Lancee la commande reboot avec les droits de l'utilisateur root
 </p>
+</div>
+<div class="apt-g">
 <h2>apt-get</h2>
 <p>
 Avanced Package Tool - GET, cette commande permet l'installation et le retrait de packages en tenant compte des dépendances<br>
@@ -287,6 +290,8 @@ Ex.:
   <li>apt-get –purge remove package3 = Supprime package3 ainsi que tous les fichiers de configuration</li>
 </ul>
   </p>
+</div>
+<div class="apt-c">
   <h2>apt-cache</h2>
   <p>
 Vise à gérer des paquets et manipulation du cache par APT <br>
@@ -312,6 +317,8 @@ Ex.:
   <li>apt-cache madison brasero = Indique le dépôt fournissant le paquet brasero</li>
 </ul>
 </p>
+</div>
+<div class="chmod">
 <h2>chmod</h2>
 <p>
 Qui vient de CHange MODe <br>
@@ -348,6 +355,8 @@ Ex.:
   <li>chmod 640 Mon_Fichier = Exactement la même chose que ci-dessus mais en utilisant les valeurs octales</li>
 </ul>
 </p>
+</div>
+<div class="chown">
 <h2>chown</h2>
 <p>CHange OWNer: Change le propriétaire et le groupe propriétaire d'un fichier. <br>
 Avec comme options les plus fréquentes :-R : Modifie récursivement un répertoire et tout ce qu'il contient <br>
@@ -358,6 +367,8 @@ Ex.:
     ainsi que tout ce qu'il contient</li>
 </ul>
 </p>
+</div>
+<div class="chgrp">
 <h2>chgrp</h2>
 <p>
 Autrement, CHange GRouPe. Il sert à changer le groupe propriétaire d'un fichier. <br>
@@ -374,6 +385,8 @@ Ex.:
     en un_Groupe</li>
 </ul>
 </p>
+</div>
+<div class="free">
 <h2>free</h2>
 <p>
 Elle sert à indiquer la mémoire disponible (libre) et donc aussi utilisée du système.<br>
@@ -388,6 +401,8 @@ Avec comme options associées:
 </ul>
 Ex.: free -m -s 5, si l'on veut afficher la mémoire du système en méga octet toutes les 5 secondes
 </p>
+</div>
+<div class="ps">
 <h2>ps</h2>
 <p>
 Pour Processes Snapshot, elle sert à afficher les processus en cours
@@ -406,6 +421,8 @@ Ex. :
 Pensez à utiliser avec grep pour limiter la liste : ps -aux | grep tuxpaint ne vous retournera que les processus<br>
 contenant tuxpaint
 </p>
+</div>
+<div class="shutd">
 <h2>shutdown</h2>
 <p>
 Permet d'éteindre ou relancer la machine au boût d'un temps déterminé (requis : on peut mettre now pour éteindre<br>
@@ -419,6 +436,8 @@ Ex.:
   <li>shutdown -P now : extinction immédiate</li>
 </ul>
 </p>
+</div>
+<div class="pasw">
 <h2>passwd</h2>
 <p>
 Cette commande permet modifier le mot de passe d'un utilisateur. <br>
@@ -430,11 +449,15 @@ adminsitrateur système ou réseau (auquel cas pourquoi lisez-vous ces lignes ;-
 généralement sans option.<br>
 Ex.: passwd =Demande à changer le mot de passe
 </p>
+</div>
+<div class="grps">
 <h2>groups</h2>
 <p>Affiche les groupes auxquels appartient un utilisateur
 Ex.: groups: Affiche la liste des groupes auxquels appartient l'utilisateur ayant tapé la commande. <br>
      groups Mon_Utilisateur = Affiche tous les groupes auxquels appartient l'utilisateur Mon_Utilisateur
 </p>
+</div>
+<div class="aduser">
 <h2>adduser</h2>
 <p>
 Pour Ajouter un utilisateur, ou un groupe, au système. <br>
@@ -464,6 +487,8 @@ Ex.:
     au uid 1000)</li>
 </ul>
 </p>
+</div>
+<div class="delus">
 <h2>deluser</h2>
 <p>
 Pour DELete USER, elle sert à supprimer un utilisateur du système. <br>
@@ -482,6 +507,8 @@ Ex.:
   <li>Supprime l'utilisateur NouvelUtilisateur du groupe "users"</li>
 </ul>
 </p>
+</div>
+<div class="df">
 <h2>df</h2>
 <p>
 Disk Free, pour afficher la quantité d'espace disque utilisé par les systèmes de fichiers. <br>
@@ -499,6 +526,8 @@ Ex.:
   <li>df -T -h = Affiche le nom des partitions et leur point de montage</li>
 </ul>
 </p>
+</div>
+<div class="fdsk">
 <h2>fdisk</h2>
 <p>
 Ce qui veut dire manipulateur de partitions. <br>
@@ -510,6 +539,8 @@ Ex.:
   <li>sudo fdisk -l</li>
 </ul>
 </p>
+</div>
+<div class="du">
 <h2>du</h2>
 <p>
 Pour Disk Usage,elle sert à afficher l'espace disque utilisé par les fichiers et/ou les répertoires. <br>
@@ -529,6 +560,8 @@ Ex.:
   <li>du -sm ~/Images/*.jpg = Affiche la taille totale des fichiers JPEG contenus dans le répertoire ~/Images</li>
 </ul>
 </p>
+</div>
+<div class="updtm">
 <h2>uptime</h2>
 <p>
 Cette commande sert à indiquer depuis quand le système fonctionne.<br>
@@ -536,10 +569,14 @@ Ex.: uptime = Affiche l'heure actuelle, la durée depuis laquelle le système fo
 actuellement connectés, et la charge système moyenne ; Commande de geek par excellence :-) qui ne sert pas à grand<br>
 chose pour un utilisateur lambda, mais utile pour un administrateur.
 </p>
+</div>
+<div class="fl">
 <h2>file</h2>
 <p>Cette commande permet d'identifier le type de fichier grâce à son MIME en utilisant les tests magic sur<br>
 le contenu des fichiers (en général les premiers bits). Les tests sont fournis par le paquet libmagic1.
 </p>
+</div>
+<p>Les commandes de cette catégorie sont à utiliser avec sagesse, ce sont des outils de sécurité à des échelles variées</p>
 </div>
 <div class="library">
 <h1>Bibliographie</h1>
