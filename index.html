@@ -16,6 +16,7 @@
     <li>Bibliographie</li>
   </ol>
 </nav>
+<div class="intro">
 <h1>Préambule</h1>
 <p>
 Les commandes servent à transmettre des instructions claires et précises afin que l'ordinateur puisse exécuter<br>
@@ -26,8 +27,10 @@ La majorité des commandes que vous trouverez sur cette page se trouvent naturel
  c'est la première commande à connaître sur notre console: man + ce que l'on veut. C'est ainsi qu'on aura à <br>
  disposition le manuel correspondant à notre demande.
 </p>
+</div>
 <!--Séparer ces deux textes, en 2 paragraphes bien distincts, me permettra ultérieurement via CSS de leur
 attribuer deux styles différents-->
+<div class="base">
 <h1>Les Commandes de Base</h1>
 <h2>man</h2>
 <p>man pour page de manuel (du système), chaque argument lié à cette commande consiste à un programme, d'un utilitaire, <br>
@@ -195,7 +198,7 @@ Ex.: grep -n montexte monfichier = Retourne toutes les lignes ainsi que leur num
   <li>-x : Règle la taille des tabulations</li>
   <li>-~ : ne comble pas les lignes vides par des ~</li>
 </ul>
-Ex.: ess -Emr~ mon_Fichier = Afficher mon_Fichier page par page avec un prompt long (affichage du pourcentage du <br>
+Ex.: less -Emr~ mon_Fichier = Afficher mon_Fichier page par page avec un prompt long (affichage du pourcentage du <br>
  fichier parcouru) en affichant les caractères spéciaux sans combler les lignes vides par des ~
 </p>
 <h2>id</h2>
@@ -203,6 +206,8 @@ Ex.: ess -Emr~ mon_Fichier = Afficher mon_Fichier page par page avec un prompt l
 La commande id affiche les informations utilisateur et de groupe pour un utilisateur spécifié, ou si aucun utilisateur <br>
  n'est spécifié, elle affiche les informations sur l'utilisateur courant.
 </p>
+</div>
+<div class="syst">
 <h1>Les Commandes Système</h1>
 <h2>sudo</h2>
 <p>
@@ -500,11 +505,14 @@ chose pour un utilisateur lambda, mais utile pour un administrateur.
 <p>Cette commande permet d'identifier le type de fichier grâce à son MIME en utilisant les tests magic sur<br>
 le contenu des fichiers (en général les premiers bits). Les tests sont fournis par le paquet libmagic1.
 </p>
+</div>
+<div class="library">
 <h1>Bibliographie</h1>
 <ol>
   <li>ubuntu-fr,https://doc.ubuntu-fr.org/tutoriel/console_commandes_de_base</li>
   <li>Command Line Cheat Sheet, https://www.git-tower.com</li>
 </ol>
+</div>
 <!--While you're writting dont forget closing tag and text align-->
 </div>
 </body>
