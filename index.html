@@ -31,12 +31,15 @@ La majorité des commandes que vous trouverez sur cette page se trouvent naturel
 <!--Séparer ces deux textes, en 2 paragraphes bien distincts, me permettra ultérieurement via CSS de leur
 attribuer deux styles différents-->
 <div class="base">
-<h1>Les Commandes de Base</h1>
+<h1 id="ttle">Les Commandes de Base</h1>
+   <div class="man">
 <h2>man</h2>
 <p>man pour page de manuel (du système), chaque argument lié à cette commande consiste à un programme, d'un utilitaire, <br>
-  d'une fonction ou d'un fichier spécial. <br>
+d'une fonction ou d'un fichier spécial. <br>
 ex.: man git <br>
 Il s'affichera des information utiles à propos du logiciel GIT. Ensuite, pour quitter la page, on tape: q</p>
+   </div>
+<div class="ls">
 <h2>ls</h2>
 <p>Pour list segment
 Il permet d'afficher le contennu du répectoire courant <br>
@@ -49,7 +52,9 @@ Il possède 4 attributs:
    <li>-lct : Permet de trier les fichiers et répertoires par date de modification décroissante</li>
 </ul></p>
 <p>ex.: ls -a, affiche tous les fichiers et répertoires y compris les cachés du répertoire courant Similaire <br>
-  à la commande dir</p><!--Never forget to put everything inside tag!!!!-->
+      à la commande dir</p><!--Never forget to put everything inside tag!!!!-->
+</div>
+<div class="cd">
 <h2>cd</h2>
 <p>Pour Change Directory, permet de se dépplacer entre les différents répectoires (dossiers) présents
 <ul>
@@ -60,6 +65,8 @@ Il possède 4 attributs:
    <li>cd/usr/bin/: se place dans le répertoire /usr/bin/</li>
 </ul>
 </p>
+</div>
+<div class="mv">
 <h2>mv</h2>
 <p>Pour MoVe, permet de déplacer ou renommer des fichiers et des répertoires.
 <ul>
@@ -74,6 +81,8 @@ Ex.:
    <li>mv unRep monRep = Renomme unRep en monRep</li>
 </ul>
 </p>
+</div>
+<div class="cp">
 <h2>cp</h2>
 <p>Pour CoPier, Permet de copier des fichiers ou des répertoires.
 <ul>
@@ -91,6 +100,8 @@ Ex.:
 en le créant /mon_Rep s'il n'existe pas</li>
 </ul>
 </p>
+</div>
+<div class="rm">
 <h2>rm (à utiliser en connaissance de cause)</h2>
 <p>Pour ReMove, permet de supprimer des fichiers.
 <ul>
@@ -99,6 +110,8 @@ en le créant /mon_Rep s'il n'existe pas</li>
    <li>-r : Efface récursivement. Ce mot signifie "y compris ses sous-répertoires et leur contenu"</li>
 </ul>
 </p>
+</div>
+<div class="mkdir">
 <h2>mkdir</h2>
 <p>Pour MaKe a  DIRectory, s'écrit aussi md, il sert à créer un nouveau répectoire Avec comme option éventuelle <br>
   -p pour générer un répectoire parent s'il n'existe pas.
@@ -111,6 +124,8 @@ en le créant /mon_Rep s'il n'existe pas</li>
   -p : Supprime les répertoires parents s'ils deviennent vides. <br>
 Et un ex.: rmdir Le_Rep = Supprime le répertoire Le_Rep
 </p>
+</div>
+<div class="top">
 <h2>top</h2>
 <p> Cette commande montre la charge CPU. Elle montre la charge CPU
 <ul>
@@ -124,8 +139,12 @@ Elle s'utilise en combinaison avec des options telles que: <br>
 -u : affiche les processus pour un utilisateur donné <br>
 ex.: top -u root
 </p>
+</div>
+  <div class="pwd">
 <h2>pwd</h2>
 <p>Pour  Print Working Directory, elle permet de nous indiquer où on est (dans quel repectoire courant on se trouve)</p>
+</div>
+<div class="ln">
 <h2>ln</h2>
 <p>Pour LiNk, elle permet de Créer un lien (physique ou symbolique) vers un fichier (ou un répertoire)</p>
 <ul>
@@ -140,6 +159,8 @@ ex.: top -u root
 </ul>
 NB: Vérifiez que vous vous trouvez bien dans le répertoire dans lequel vous souhaitez créer le lien avant d’exécuter<br>
 cette commande</p>
+</div>
+<div class="find">
 <h2>find</h2>
 <p>Pour (en français) trouver, elle permet de Permet de chercher des fichiers et éventuellement d'exécuter des commandes<br>
 sur ceux-ci; la recherche est récursive c'est-à-dire qu'elle concerne le répertoire de départ et toute sa descendance <br>
@@ -155,6 +176,8 @@ sur ceux-ci; la recherche est récursive c'est-à-dire qu'elle concerne le répe
   <li>-group : Recherche de fichiers appartenant au groupe donné</li>
 </ul>
 </p>
+</div>
+<div class="grep">
 <h2>grep</h2>
 <p>Pour Global Regular Expression Print, elle sert à Recherche une chaîne de caractères dans des fichiers <br>
    (ou depuis la console si aucun fichier n'est indiqué); elle est régulièrement utilisé en filtre avec d'autres commandes.
@@ -169,15 +192,21 @@ sur ceux-ci; la recherche est récursive c'est-à-dire qu'elle concerne le répe
 </ul>
 Ex.: grep -n montexte monfichier = Retourne toutes les lignes ainsi que leur numéro où montexte apparait dans monfichier
 </p>
+</div>
+<div class="loc">
 <h2>locate</h2>
 <p>Son rôle est très simple: recherche_ligne_commande</p>
-  <h2>cat</h2>
-  <p>Pour ConcATenate, elle sert à afficher le contenu d'un fichier.
+</div>
+<div class="cat">
+<h2>cat</h2>
+<p>Pour ConcATenate, elle sert à afficher le contenu d'un fichier.
 <ul>
   <li>-n : Affiche les numéros de ligne</li>
   <li>-v : Affiche les caractères de contrôles</li>
 </ul>
   </p>
+</div>
+<div class="more">
   <h2>more</h2>
   <p>Elle permet d'achiffer un fichier page par page.
     <ul>
@@ -187,6 +216,8 @@ Ex.: grep -n montexte monfichier = Retourne toutes les lignes ainsi que leur num
   Ex.: more -sf mon_Fichier = Affiche mon_Fichier page par page en concaténant les lignes vides sans couper les<br>
   lignes longues.
 </p>
+</div>
+<div class="less">
 <h2>less</h2>
 <p>Elle Affiche un fichier en permettant la navigation, ainsi que certaines possibilités de vi( par ex: la recherche)
 <ul>
@@ -201,11 +232,15 @@ Ex.: grep -n montexte monfichier = Retourne toutes les lignes ainsi que leur num
 Ex.: less -Emr~ mon_Fichier = Afficher mon_Fichier page par page avec un prompt long (affichage du pourcentage du <br>
  fichier parcouru) en affichant les caractères spéciaux sans combler les lignes vides par des ~
 </p>
+</div>
+<div class="id">
 <h2>id</h2>
 <p>
 La commande id affiche les informations utilisateur et de groupe pour un utilisateur spécifié, ou si aucun utilisateur <br>
  n'est spécifié, elle affiche les informations sur l'utilisateur courant.
 </p>
+</div>
+<p>NB: C'est une liste non-exhaustive</p>
 </div>
 <div class="syst">
 <h1>Les Commandes Système</h1>
