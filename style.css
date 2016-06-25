@@ -53,6 +53,9 @@ padding-top: 2%;
   border:5px orange;
   background-color: #f5f5f5;
   text-align: left;
+  padding-left: 2%;
+  padding-bottom: 2%;
+  padding-top: 1%;
 }
 .man{
   background-color: #f0ffff;
@@ -60,6 +63,10 @@ padding-top: 2%;
     height: auto;
     margin: 20px;
     border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .ls{
   background-color: #f0ffff;
@@ -67,6 +74,10 @@ padding-top: 2%;
     height: auto;
     margin: 20px;
     border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .cd{
   background-color: #f0ffff;
@@ -74,6 +85,10 @@ padding-top: 2%;
     height: auto;
     margin: 20px;
     border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .mv{
   background-color: #f0ffff;
@@ -81,6 +96,10 @@ padding-top: 2%;
     height: auto;
     margin: 20px;
     border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .cp{
   background-color: #f0ffff;
@@ -88,20 +107,32 @@ padding-top: 2%;
     height: auto;
     margin: 20px;
     border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .rm{
   background-color: #f0ffff;
     width: auto;
     height: auto;
     margin: 20px;
-    border: 50px orange;;
+    border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .mkdir{
   background-color: #f0ffff;
     width: auto;
     height: auto;
     margin: 20px;
-    border: 50px orange;ge;
+    border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .top{
   background-color: #f0ffff;
@@ -109,6 +140,10 @@ padding-top: 2%;
     height: auto;
     margin: 20px;
     border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .ln{
   background-color: #f0ffff;
@@ -116,13 +151,21 @@ padding-top: 2%;
     height: auto;
     margin: 20px;
     border: 50px orange;nge;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .pwd{
   background-color: #f0ffff;
     width: auto;
     height: auto;
     margin: 20px;
-    border: 50px orange;e;
+    border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .find{
   background-color: #f0ffff;
@@ -130,13 +173,21 @@ padding-top: 2%;
     height: auto;
     margin: 20px;
     border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .grep{
   background-color: #f0ffff;
     width: auto;
     height: auto;
     margin: 20px;
-    border: 50px orange;;
+    border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .loc{
   background-color: #f0ffff;
@@ -144,6 +195,10 @@ padding-top: 2%;
     height: auto;
     margin: 20px;
     border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .cat{
   background-color: #f0ffff;
@@ -151,13 +206,21 @@ padding-top: 2%;
     height: auto;
     margin: 20px;
     border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .more{
   background-color: #f0ffff;
     width: auto;
     height: auto;
     margin: 20px;
-    border: 50px orange;;
+    border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .less{
   background-color: #f0ffff;
@@ -165,6 +228,10 @@ padding-top: 2%;
     height: auto;
     margin: 20px;
     border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .id{
   background-color: #f0ffff;
@@ -172,13 +239,21 @@ padding-top: 2%;
     height: auto;
     margin: 20px;
     border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .sudo{
   background-color: #f0ffff;
     width: auto;
     height: auto;
     margin: 20px;
-    border: 50px orange;;
+    border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .apt-g{
   background-color: #f0ffff;
@@ -186,20 +261,32 @@ padding-top: 2%;
     height: auto;
     margin: 20px;
     border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .apt-c{
   background-color: #f0ffff;
     width: auto;
     height: auto;
     margin: 20px;
-    border: 50px orange;e;
+    border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .chmod{
   background-color: #f0ffff;
     width: auto;
     height: auto;
     margin: 20px;
-    border: 50px orange;;
+    border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .chown{
   background-color: #f0ffff;
@@ -207,6 +294,10 @@ padding-top: 2%;
     height: auto;
     margin: 20px;
     border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .chgrp{
   background-color: #f0ffff;
@@ -214,6 +305,10 @@ padding-top: 2%;
     height: auto;
     margin: 20px;
     border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .free{
   background-color: #f0ffff;
@@ -222,6 +317,10 @@ padding-top: 2%;
     margin: 20px;
     border: 50px orange;
   border: 50px orange;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-bottom: 1%;
+  padding-top: 1%;
 }
 .ps{
   background-color: #f0ffff;
@@ -229,6 +328,10 @@ padding-top: 2%;
     height: auto;
     margin: 20px;
     border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .shutd{
   background-color: #f0ffff;
@@ -236,6 +339,10 @@ padding-top: 2%;
     height: auto;
     margin: 20px;
     border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .pasw{
   background-color: #f0ffff;
@@ -243,6 +350,10 @@ padding-top: 2%;
     height: auto;
     margin: 20px;
     border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .grps{
   background-color: #f0ffff;
@@ -250,6 +361,10 @@ padding-top: 2%;
     height: auto;
     margin: 20px;
     border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .aduser{
   background-color: #f0ffff;
@@ -257,6 +372,10 @@ padding-top: 2%;
     height: auto;
     margin: 20px;
     border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .delus{
   background-color: #f0ffff;
@@ -264,6 +383,10 @@ padding-top: 2%;
     height: auto;
     margin: 20px;
     border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .df{
   background-color: #f0ffff;
@@ -271,6 +394,10 @@ padding-top: 2%;
     height: auto;
     margin: 20px;
     border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .fdsk{
   background-color: #f0ffff;
@@ -278,6 +405,10 @@ padding-top: 2%;
     height: auto;
     margin: 20px;
     border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .du{
   background-color: #f0ffff;
@@ -285,6 +416,10 @@ padding-top: 2%;
     height: auto;
     margin: 20px;
     border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .updtm{
   background-color: #f0ffff;
@@ -292,6 +427,10 @@ padding-top: 2%;
     height: auto;
     margin: 20px;
     border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 .fl{
   background-color: #f0ffff;
@@ -299,4 +438,8 @@ padding-top: 2%;
     height: auto;
     margin: 20px;
     border: 50px orange;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
