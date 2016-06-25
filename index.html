@@ -9,37 +9,35 @@
 <!--Je vais m'appuyer sur les balise h1 pour structurer ma page-->
 <h1>Préambule</h1>
 <p>
-Les commandes servent à transmettre des instructions claires et précises afin que l'ordinateur
-puisse exécuter des tâches appropriées. Sur cette pages aucune distinstion ne sera établit entre les
-les options wPOSIX et WGNU.
+Les commandes servent à transmettre des instructions claires et précises afin que l'ordinateur puisse exécuter<br>
+des tâches appropriées. Sur cette pages aucune distinstion ne sera établit entre lesles options wPOSIX et WGNU.
 </p>
 <p>
-La majorité des commandes que vous trouverez sur cette page se trouvent naturellement
-dans chacun de nos systèmes, c'est la première commande à connaître sur notre console: man + ce que l'on veut.
-C'est ainsi qu'on aura à disposition le manuel correspondant à notre demande.
+La majorité des commandes que vous trouverez sur cette page se trouvent naturellement dans chacun de nos systèmes,<br>
+ c'est la première commande à connaître sur notre console: man + ce que l'on veut. C'est ainsi qu'on aura à <br>
+ disposition le manuel correspondant à notre demande.
 </p>
 <!--Séparer ces deux textes, en 2 paragraphes bien distincts, me permettra ultérieurement via CSS de leur
 attribuer deux styles différents-->
 <h1>Les Commandes de Base</h1>
 <h2>man</h2>
-<p>man pour page de manuel (du système), chaque argument lié à cette commande consiste à un programme,
-d'un utilitaire, d'une fonction ou d'un fichier spécial.
-ex.: man git
-Il s'affichera des information utiles à propos du logiciel GIT.
-Ensuite, pour quitter la page, on tape: q</p>
+<p>man pour page de manuel (du système), chaque argument lié à cette commande consiste à un programme, d'un utilitaire, <br>
+  d'une fonction ou d'un fichier spécial. <br>
+ex.: man git <br>
+Il s'affichera des information utiles à propos du logiciel GIT. Ensuite, pour quitter la page, on tape: q</p>
 <h2>ls</h2>
 <p>Pour list segment
-Il permet d'afficher le contennu du répectoire courant
+Il permet d'afficher le contennu du répectoire courant <br>
 Il possède 4 attributs:
 <ul>
-   <li>-l : Permet un affichage détaillé du répertoire (permissions d'accès, le nombre de liens physiques,
+   <li>-l : Permet un affichage détaillé du répertoire (permissions d'accès, le nombre de liens physiques,<br>
        le nom du propriétaire et du groupe, la taille en octets, et l'horodatage)</li>
    <li>-h : Associé avec -l affiche la taille des fichiers avec un suffixe correspondant à l'unité (K, M, G)</li>
    <li>-a : Permet l'affichage des fichiers et répertoires cachés (ceux qui commencent par un . (point))</li>
    <li>-lct : Permet de trier les fichiers et répertoires par date de modification décroissante</li>
 </ul></p>
-<p>ex.: ls -a, affiche tous les fichiers et répertoires y compris les cachés du répertoire courant
-Similaire à la commande dir</p><!--Never forget to put everything inside tag!!!!-->
+<p>ex.: ls -a, affiche tous les fichiers et répertoires y compris les cachés du répertoire courant Similaire <br>
+  à la commande dir</p><!--Never forget to put everything inside tag!!!!-->
 <h2>cd</h2>
 <p>Pour Change Directory, permet de se dépplacer entre les différents répectoires (dossiers) présents
 <ul>
@@ -77,7 +75,8 @@ Ex.:
 Ex.:
 <ul>
    <li> cp mon_Fichier sous_rep/ = Copie mon_Fichier dans sous_rep</li>
-   <li>cp -r mon_Rep/ nom_autre_Rep/ = Copie le répertoire mon_Rep (et ses éventuels sous-répertoires) vers nom_autre_Rep en le créant /mon_Rep s'il n'existe pas</li>
+   <li>cp -r mon_Rep/ nom_autre_Rep/ = Copie le répertoire mon_Rep (et ses éventuels sous-répertoires) vers nom_autre_Rep<br>
+en le créant /mon_Rep s'il n'existe pas</li>
 </ul>
 </p>
 <h2>rm (à utiliser en connaissance de cause)</h2>
@@ -89,15 +88,15 @@ Ex.:
 </ul>
 </p>
 <h2>mkdir</h2>
-<p>Pour MaKe a  DIRectory, s'écrit aussi md, il sert à créer un nouveau répectoire
-Avec comme option éventuelle -p pour générer un répectoire parent s'il n'existe pas.
+<p>Pour MaKe a  DIRectory, s'écrit aussi md, il sert à créer un nouveau répectoire Avec comme option éventuelle <br>
+  -p pour générer un répectoire parent s'il n'existe pas.
 <ul>
    <li>mkdir photos = Crée le répertoire photos</li>
    <li>mkdir -p photos/2005/noel = Crée le répertoire noel et s'ils n'existent pas les répertoires 2005 et photos</li>
 </ul></p>
 <h2>rmdir</h2>
-<p>Pour ReMoveDIRectory, elle permet de supprimer les repectoires VIDES. Une des options:
--p : Supprime les répertoires parents s'ils deviennent vides.
+<p>Pour ReMoveDIRectory, elle permet de supprimer les repectoires VIDES. Une des options: <br>
+  -p : Supprime les répertoires parents s'ils deviennent vides. <br>
 Et un ex.: rmdir Le_Rep = Supprime le répertoire Le_Rep
 </p>
 <h2>top</h2>
@@ -109,8 +108,8 @@ Et un ex.: rmdir Le_Rep = Supprime le répertoire Le_Rep
   <li>La touche [ k ] permet de tuer directement un processus en rentrant son PID</li>
   <li>La touche [ q ] permet de quitter le programme</li>
 </ul>
-Elle s'utilise en combinaison avec des options telles que:
--u : affiche les processus pour un utilisateur donné
+Elle s'utilise en combinaison avec des options telles que: <br>
+-u : affiche les processus pour un utilisateur donné <br>
 ex.: top -u root
 </p>
 <h2>pwd</h2>
@@ -123,13 +122,16 @@ ex.: top -u root
   <li>-d : Crée un lien sur un répertoire (uniquement en mode sudo ou root)</li>
 </ul>
 <ul>
-  <li>ln -s Rep1/Rep2/Mon_fichier Mon_Lien = Crée un lien symbolique Mon_Lien de Rep1/Rep2/Mon_fichier dans le répertoire où on se trouve</li>
+  <li>ln -s Rep1/Rep2/Mon_fichier Mon_Lien = Crée un lien symbolique Mon_Lien de Rep1/Rep2/Mon_fichier dans le  <br>
+    répertoire où on se trouve</li>
   <li>ln Mon_fichier un_Rep/Autre_Nom = Crée un lien physique Autre_Nom de Mon_fichier dans le répertoire un_Rep</li>
 </ul>
-NB: Vérifiez que vous vous trouvez bien dans le répertoire dans lequel vous souhaitez créer le lien avant d’exécuter cette commande</p>
+NB: Vérifiez que vous vous trouvez bien dans le répertoire dans lequel vous souhaitez créer le lien avant d’exécuter<br>
+cette commande</p>
 <h2>find</h2>
-<p>Pour (en français) trouver, elle permet de Permet de chercher des fichiers et éventuellement d'exécuter des commandes sur ceux-ci ;
-la recherche est récursive c'est-à-dire qu'elle concerne le répertoire de départ et toute sa descendance (sous-répertoires ainsi que toute leur descendance …)
+<p>Pour (en français) trouver, elle permet de Permet de chercher des fichiers et éventuellement d'exécuter des commandes<br>
+sur ceux-ci; la recherche est récursive c'est-à-dire qu'elle concerne le répertoire de départ et toute sa descendance <br>
+(sous-répertoires ainsi que toute leur descendance …)
 <ul>
   <li>-name : Recherche d'un fichier par son nom</li>
   <li>-iname : Même chose que -name mais insensible à la casse</li>
@@ -142,9 +144,8 @@ la recherche est récursive c'est-à-dire qu'elle concerne le répertoire de dé
 </ul>
 </p>
 <h2>grep</h2>
-<p>Pour Global Regular Expression Print, elle sert à Recherche une chaîne de caractères
-dans des fichiers (ou depuis la console si aucun fichier n'est indiqué); elle est régulièrement
-utilisé en filtre avec d'autres commandes.
+<p>Pour Global Regular Expression Print, elle sert à Recherche une chaîne de caractères dans des fichiers <br>
+   (ou depuis la console si aucun fichier n'est indiqué); elle est régulièrement utilisé en filtre avec d'autres commandes.
 <ul>
   <li>-c : Retourne le nombre de lignes au lieu des lignes elles mêmes</li>
   <li>-n : Retourne les lignes préfixées par leur numéro</li>
@@ -171,40 +172,44 @@ Ex.: grep -n montexte monfichier = Retourne toutes les lignes ainsi que leur num
  <li>-s : Regroupe les lignes vides consécutives en une seule</li>
  <li>-f : Ne coupe pas les lignes longues</li>
 </ul>
-  Ex.: more -sf mon_Fichier = Affiche mon_Fichier page par page en concaténant les lignes vides sans couper les lignes longues.
+  Ex.: more -sf mon_Fichier = Affiche mon_Fichier page par page en concaténant les lignes vides sans couper les<br>
+  lignes longues.
 </p>
 <h2>less</h2>
 <p>Elle Affiche un fichier en permettant la navigation, ainsi que certaines possibilités de vi( par ex: la recherche)
 <ul>
-  <li>-e ou -E : Quitte automatiquement la deuxième fois que la fin du fichier est atteinte, ou dès la première fois avec -E</li>
+  <li>-e ou -E : Quitte automatiquement la deuxième fois que la fin du fichier est atteinte, ou dès la première<br>
+     fois avec -E</li>
   <li>-F : Quitte automatiquement si le fichier tient sur le terminal</li>
   <li>-m ou -M : Prompt long a la more</li>
   <li>-r ou -R : Autorise les caractères spéciaux</li>
   <li>-x : Règle la taille des tabulations</li>
   <li>-~ : ne comble pas les lignes vides par des ~</li>
 </ul>
-Ex.: ess -Emr~ mon_Fichier = Afficher mon_Fichier page par page avec un prompt long (affichage du pourcentage du fichier parcouru)
-en affichant les caractères spéciaux sans combler les lignes vides par des ~
+Ex.: ess -Emr~ mon_Fichier = Afficher mon_Fichier page par page avec un prompt long (affichage du pourcentage du <br>
+ fichier parcouru) en affichant les caractères spéciaux sans combler les lignes vides par des ~
 </p>
 <h2>id</h2>
 <p>
-La commande id affiche les informations utilisateur et de groupe pour un utilisateur spécifié, ou si aucun utilisateur n'est spécifié,
-elle affiche les informations sur l'utilisateur courant.
+La commande id affiche les informations utilisateur et de groupe pour un utilisateur spécifié, ou si aucun utilisateur <br>
+ n'est spécifié, elle affiche les informations sur l'utilisateur courant.
 </p>
 <h1>Les Commandes Système</h1>
 <h2>sudo</h2>
 <p>
-Vient de Substitute User - DO, grâce à elle on s'octroie des privilèges (des dérogations) qui vont nous permmettre d'exécuter des tâches
-en tant qu'un autre utilisateur.
+Vient de Substitute User - DO, grâce à elle on s'octroie des privilèges (des dérogations) qui vont nous permmettre  <br>
+d'exécuter des tâches en tant qu'un autre utilisateur.
 <ul>
   <li>-s : Importe les variables d'environnement du shell</li>
-  <li>-k : Lorsque l'on utilise sudo, il garde en mémoire le mot de passe ; cette option déconnecte l'utilisateur et forcera à redemander un mot de passe si sudo est exécuté avant le timeout défini.</li>
+  <li>-k : Lorsque l'on utilise sudo, il garde en mémoire le mot de passe ; cette option déconnecte l'utilisateur<br>
+    et forcera à redemander un mot de passe si sudo est exécuté avant le timeout défini.</li>
 </ul>
 Ex.: sudo reboot = Lancee la commande reboot avec les droits de l'utilisateur root
 </p>
 <h2>apt-get</h2>
 <p>
-Avanced Package Tool - GET, cette commande permet l'installation et le retrait de packages en tenant compte des dépendances ainsi que le téléchargement des packages s'ils sont sur une source réseau.
+Avanced Package Tool - GET, cette commande permet l'installation et le retrait de packages en tenant compte des dépendances<br>
+ainsi que le téléchargement des packages s'ils sont sur une source réseau.<br>
 Avec comme commandes associées:
 <ul>
   <li>update : Met à jour la liste des packages disponibles en fonction des sources fournies</li>
@@ -221,7 +226,8 @@ et comme options:
   <li>-s : Fait une simulation des actions à mener sans rien toucher au système</li>
   <li>-y : Répond automatiquement oui à toutes les questions</li>
   <li>-u : Affiche les paquets mis à jour</li>
-  <li>–purge : A utiliser conjointement avec remove pour supprimer tout ce qui peut l'être (fichiers de configuration par exemple)</li>
+  <li>–purge : A utiliser conjointement avec remove pour supprimer tout ce qui peut l'être (fichiers de configuration par <br>
+    exemple)</li>
   <li>–reinstall : Réinstaller les paquets avec leur version plus récente</li>
 </ul>
 Ex.:
@@ -234,7 +240,7 @@ Ex.:
   </p>
   <h2>apt-cache</h2>
   <p>
-Vise à gérer des paquets et manipulation du cache par APT
+Vise à gérer des paquets et manipulation du cache par APT <br>
 Associée aux commandes:
 <ul>
   <li>show : Affiche les informations associées au paquet</li>
@@ -259,8 +265,8 @@ Ex.:
 </p>
 <h2>chmod</h2>
 <p>
-Qui vient de CHange MODe
-Modifie les permissions d'accès à un fichier ou à un répertoire.
+Qui vient de CHange MODe <br>
+Modifie les permissions d'accès à un fichier ou à un répertoire. <br>
 Type d'autorisations (une autorisation d'exécution sur un répertoire autorise son ouverture) :
 <ul>
   <li>+ : Ajoute une permission</li>
@@ -284,38 +290,44 @@ Ex.:
 <ul>
   <li>chmod ugo+x mon_Rep = Ajoute l'exécution (ouverture) du répertoire mon_Rep à tous (propriétaire, groupe, autres)</li>
   <li>chmod go-wx mon_Rep = Supprime l'autorisation d'écriture et l'exécution de monRep au groupe et aux autres</li>
-  <li>chmod u=rw,go=r Mon_Fichier = Fixe l'autorisation de lecture et d'écriture au propriétaire de MonFichier et une autorisation de lecture au groupe et aux autres</li>
-  <li>chmod 644 Mon_Fichier = Exactement la même chose que ci-dessus mais en utilisant les valeurs octales (Nota : 6 = 4+2 = lecture + écriture)</li>
-  <li>chmod u=rw,g=r,o= Mon_Fichier : Fixe l'autorisation d'ouverture et de lecture de MonFichier au propriétaire, uniquement la lecture au groupe et interdit tout accès aux autres</li>
+  <li>chmod u=rw,go=r Mon_Fichier = Fixe l'autorisation de lecture et d'écriture au propriétaire de Mon_Fichier  <br>
+    et une autorisation de lecture au groupe et aux autres</li>
+  <li>chmod 644 Mon_Fichier = Exactement la même chose que ci-dessus mais en utilisant les valeurs octales <br>
+    (Nota: 6 = 4+2 = lecture + écriture)</li>
+  <li>chmod u=rw,g=r,o= Mon_Fichier : Fixe l'autorisation d'ouverture et de lecture de MonFichier au  <br>
+    propriétaire, uniquement la lecture au groupe et interdit tout accès aux autres</li>
   <li>chmod 640 Mon_Fichier = Exactement la même chose que ci-dessus mais en utilisant les valeurs octales</li>
 </ul>
 </p>
 <h2>chown</h2>
-<p>CHange OWNer: Change le propriétaire et le groupe propriétaire d'un fichier
-Avec comme options les plus fréquentes :-R : Modifie récursivement un répertoire et tout ce qu'il contient
+<p>CHange OWNer: Change le propriétaire et le groupe propriétaire d'un fichier. <br>
+Avec comme options les plus fréquentes :-R : Modifie récursivement un répertoire et tout ce qu'il contient <br>
 Ex.:
 <ul>
   <li>chown autre_Utilisateur Mon_Fichier = Change le propriétaire de Mon_Fichier en autre_Utilisateur</li>
-  <li>chown -R lui:nous mon_Rep = Change le propriétaire en lui et le groupe propriétaire en nous du répertoire mon_Rep ainsi que tout ce qu'il contient</li>
+  <li>chown -R lui:nous mon_Rep = Change le propriétaire en lui et le groupe propriétaire en nous du répertoire mon_Rep<br>
+    ainsi que tout ce qu'il contient</li>
 </ul>
 </p>
 <h2>chgrp</h2>
 <p>
-Autrement, CHange GRouPe. Il sert à changer le groupe propriétaire d'un fichier.
+Autrement, CHange GRouPe. Il sert à changer le groupe propriétaire d'un fichier. <br>
 Ses options les plus récurrentes
 <ul>
   <li>-R : Change récursivement un répertoire et tout ce qu'il contient</li>
   <li>-h : Change le groupe propriétaire d'un lien symbolique et seulement lui (ne touche pas à la destination du lien)</li>
-  <li>-L : Si fournie avec R , change le groupe propriétaire d'un répertoire et des fichiers qu'il contient s'il est pointé par un lien symbolique rencontré lors de l'exécution</li>
+  <li>-L : Si fournie avec R , change le groupe propriétaire d'un répertoire et des fichiers qu'il contient s'il est <br>
+     pointé par un lien symbolique rencontré lors de l'exécution</li>
 </ul>
 Ex.:
   <li>chgrp un_Groupe Mon_Fichier = Change le groupe propriétaire du fichier Mon_Fichier en un_Groupe</li>
-  <li>chgrp -R un_Groupe mon_Rep = Change le groupe propriétaire du répertoire mon_Rep ainsi que tout ce qu'il contient en un_Groupe</li>
+  <li>chgrp -R un_Groupe mon_Rep = Change le groupe propriétaire du répertoire mon_Rep ainsi que tout ce qu'il contient  <br>
+    en un_Groupe</li>
 </ul>
 </p>
 <h2>free</h2>
 <p>
-Elle sert à indiquer la mémoire disponible (libre) et donc aussi utilisée du système
+Elle sert à indiquer la mémoire disponible (libre) et donc aussi utilisée du système.<br>
 Avec comme options associées:
 <ul>
   <li>-b : Affiche la mémoire en bytes</li>
@@ -342,12 +354,14 @@ Ex. :
   <li>ps -u = Tous les processus de l'utilisateur courant</li>
   <li>ps -aux = Tous les processus en cours</li>
 </ul>
-Pensez à utiliser avec grep pour limiter la liste : ps -aux | grep tuxpaint ne vous retournera que les processus contenant tuxpaint
+Pensez à utiliser avec grep pour limiter la liste : ps -aux | grep tuxpaint ne vous retournera que les processus<br>
+contenant tuxpaint
 </p>
 <h2>shutdown</h2>
 <p>
-Permet d'éteindre ou relancer la machine au boût d'un temps déterminé (requis : on peut mettre now pour éteindre immédiatement). Les nouvelles connexions seront bloquées quelques minutes avant l'extinction et les utilisateurs connectés sont prévenus à l'avance.
-Avec comme options:
+Permet d'éteindre ou relancer la machine au boût d'un temps déterminé (requis : on peut mettre now pour éteindre<br>
+immédiatement). Les nouvelles connexions seront bloquées quelques minutes avant l'extinction et les utilisateurs <br>
+connectés sont prévenus à l'avance. Avec comme options:
   <li>-r : pour relancer (reboot)</li>
   <li>-P : pour éteindre</li>
 Ex.:
@@ -358,46 +372,52 @@ Ex.:
 </p>
 <h2>passwd</h2>
 <p>
-Cette commande permet modifier le mot de passe d'un utilisateur.
+Cette commande permet modifier le mot de passe d'un utilisateur. <br>
 Elle est souvent associée à l'option:
--S : Affiche l'état d'un compte (nom du compte, bloqué (L), si l'utilisateur
-n'a pas de mot de passe (NP) ou a un mot de passe utilisable (P), date de dernière
-modification du mot de passe, durée minimum avant modification, durée maximum de validité,
-durée d'avertissement, durée d'inactivité autorisée)
-A moins d'être adminsitrateur système ou réseau (auquel cas pourquoi lisez-vous ces lignes ;-) ?)
-cette commande s'utilise généralement sans option.
+-S : Affiche l'état d'un compte (nom du compte, bloqué (L), si l'utilisateur n'a pas de mot de passe (NP) <br>
+ou a un mot de passe utilisable (P), date de dernière modification du mot de passe, durée minimum avant <br>
+modification, durée maximum de validité, durée d'avertissement, durée d'inactivité autorisée).A moins d'être <br>
+adminsitrateur système ou réseau (auquel cas pourquoi lisez-vous ces lignes ;-) ?) cette commande s'utilise <br>
+généralement sans option.<br>
 Ex.: passwd =Demande à changer le mot de passe
 </p>
 <h2>groups</h2>
 <p>Affiche les groupes auxquels appartient un utilisateur
-Ex.: groups: Affiche la liste des groupes auxquels appartient l'utilisateur ayant tapé la commande.
+Ex.: groups: Affiche la liste des groupes auxquels appartient l'utilisateur ayant tapé la commande. <br>
      groups Mon_Utilisateur = Affiche tous les groupes auxquels appartient l'utilisateur Mon_Utilisateur
 </p>
 <h2>adduser</h2>
 <p>
-Pour Ajouter un utilisateur, ou un groupe, au système.
+Pour Ajouter un utilisateur, ou un groupe, au système. <br>
 Ses Options les plus fréquentes :
 <ul>
   <li>–disabled-login : Empêche l'utilisateur de se connecter</li>
-  <li>–disabled-password : Un peu comme </del>disabled-login sauf qu'il est possible de se connecter via une clé RSA SSH, pratique pour créer un utilisateur qui ne se connectera que via SSH</li>
+  <li>–disabled-password : Un peu comme </del>disabled-login sauf qu'il est possible de se connecter via une clé <br>
+    RSA SSH, pratique pour créer un utilisateur qui ne se connectera que via SSH</li>
   <li>–system : Crée un utilisateur système</li>
-  <li>–group : Avec –system crée un groupe avec le même ID que l'utilisateur système, sans un groupe avec le nom donné sera créé</li>
+  <li>–group : Avec –system crée un groupe avec le même ID que l'utilisateur système, sans un groupe avec le nom<br>
+    donné sera créé</li>
   <li>–home : Permet de fixer le répertoire HOME de l'utilisateur</li>
   <li>–no-create-home : Ne crée pas de répertoire HOME</li>
 </ul>
 Ex.:
 <ul>
   <li>adduser MonUtilisateur = Crée l'utilisateur MonUtilisateur</li>
-  <li>adduser –disabled-password –no-create-home UtilisateurSSH = Crée un utilisateur UtilisateurSSH sans mot de passe qui ne pourra pas se connecter directement sur la machine et sans lui créer de répertoire home</li>
-  <li>adduser –disabled-password –home /home/UtilisateurSSH UtilisateurSSH = Même chose qu'au-dessus sauf qu'on lui donne le même répertoire HOME qu'à l'utilisateur UtilisateurSSH créé en premier</li>
-  <li>adduser UtilisateurSSH fuse = Ajoute l'utilisateur UtilisateurSSH (crée préalablement) dans le groupe "fuse", on peut faire aussi un: gpasswd -a $USER fuse</li>
+  <li>adduser –disabled-password –no-create-home UtilisateurSSH = Crée un utilisateur UtilisateurSSH sans mot de passe qui <br>
+    ne pourra pas se connecter directement sur la machine et sans lui créer de répertoire home</li>
+  <li>adduser –disabled-password –home /home/UtilisateurSSH UtilisateurSSH = Même chose qu'au-dessus sauf qu'on lui donne <br>
+    le même répertoire HOME qu'à l'utilisateur UtilisateurSSH créé en premier</li>
+  <li>adduser UtilisateurSSH fuse = Ajoute l'utilisateur UtilisateurSSH (crée préalablement) dans le groupe "fuse", on peut <br>
+    faire aussi un: gpasswd -a $USER fuse</li>
   <li>adduser Nouvel_Utilisateur ––in_group users = Crée l'utilisateur Nouvel_Utilisateur et l'ajoute au groupe "users"</li>
-  <li>adduser Nouvel_Utilisateur ––in_group users ––uid 1000 = Crée l'utilisateur Nouvel_Utilisateur avec l'uid 1000 et l'ajoute au groupe "users" (utile pour écrire sur une partition ext2/3/4 externe au systeme ou un dossier appartenant au uid 1000)</li>
+  <li>adduser Nouvel_Utilisateur ––in_group users ––uid 1000 = Crée l'utilisateur Nouvel_Utilisateur avec l'uid 1000 et <br>
+    l'ajoute au groupe "users" (utile pour écrire sur une partition ext2/3/4 externe au systeme ou un dossier appartenant <br>
+    au uid 1000)</li>
 </ul>
 </p>
 <h2>deluser</h2>
 <p>
-Pour DELete USER, elle sert à supprimer un utilisateur du système.
+Pour DELete USER, elle sert à supprimer un utilisateur du système. <br>
 Les options associées:
 <ul>
   <li>–system : Ne supprime l'utilisateur que si c'est un utilisateur système</li>
@@ -415,7 +435,7 @@ Ex.:
 </p>
 <h2>df</h2>
 <p>
-Disk Free, pour afficher la quantité d'espace disque utilisé par les systèmes de fichiers.
+Disk Free, pour afficher la quantité d'espace disque utilisé par les systèmes de fichiers. <br>
 Les options récurrentes:
 <ul>
   <li>-a : Affiche tous les systèmes de fichiers, y compris ceux de 0 blocs (par exemple : proc, sysfs, usbfs et tmpfs)</li>
@@ -432,9 +452,9 @@ Ex.:
 </p>
 <h2>fdisk</h2>
 <p>
-Ce qui veut dire manipulateur de partitions
-Modifie la table de partition des disques, son utilisation est auto-documentée avec la commande m
-L'option la plus fréquente: -l Informations détaillées des disques
+Ce qui veut dire manipulateur de partitions. <br>
+Modifie la table de partition des disques, son utilisation est auto-documentée avec la commande m. <br>
+L'option la plus fréquente: -l Informations détaillées des disques. <br>
 Ex.:
 <ul>
   <li>sudo fdisk /dev/sda</li>
@@ -443,7 +463,7 @@ Ex.:
 </p>
 <h2>du</h2>
 <p>
-Pour Disk Usage,elle sert à afficher l'espace disque utilisé par les fichiers et/ou les répertoires
+Pour Disk Usage,elle sert à afficher l'espace disque utilisé par les fichiers et/ou les répertoires. <br>
 Les options les plus fréquentes :
 <ul>
   <li>-a : Afficher pour tous les fichiers et pas uniquement les répertoires</li>
@@ -455,19 +475,21 @@ Les options les plus fréquentes :
 Ex.:
 <ul>
   <li>du -hs dir = Affiche la taille du répertoire dir ou du répertoire courant si dir est omis</li>
-  <li>du -ch /home/MonUtilisateur = Affiche la taille des répertoires contenus dans /home/MonUtilisateur en utilisant un suffixe puis le total</li>
+  <li>du -ch /home/MonUtilisateur = Affiche la taille des répertoires contenus dans /home/MonUtilisateur en<br>
+    utilisant un suffixe puis le total</li>
   <li>du -sm ~/Images/*.jpg = Affiche la taille totale des fichiers JPEG contenus dans le répertoire ~/Images</li>
 </ul>
 </p>
 <h2>uptime</h2>
 <p>
-Cette commande sert à indiquer depuis quand le système fonctionne.
-Ex.: uptime = Affiche l'heure actuelle, la durée depuis laquelle le système fonctionne, le nombre d'utilisateurs actuellement connectés, et la charge système moyenne ; Commande de geek par excellence :-) qui ne sert pas à grand chose pour un utilisateur lambda, mais utile pour un administrateur.
+Cette commande sert à indiquer depuis quand le système fonctionne.<br>
+Ex.: uptime = Affiche l'heure actuelle, la durée depuis laquelle le système fonctionne, le nombre d'utilisateurs <br>
+actuellement connectés, et la charge système moyenne ; Commande de geek par excellence :-) qui ne sert pas à grand<br>
+chose pour un utilisateur lambda, mais utile pour un administrateur.
 </p>
 <h2>file</h2>
-<p>Cette commande permet d'identifier le type de fichier grâce à son MIME en utilisant
-les tests magic sur le contenu des fichiers (en général les premiers bits). Les tests sont
-fournis par le paquet libmagic1.
+<p>Cette commande permet d'identifier le type de fichier grâce à son MIME en utilisant les tests magic sur<br>
+le contenu des fichiers (en général les premiers bits). Les tests sont fournis par le paquet libmagic1.
 </p>
 <h1>Bibliographie</h1>
 <ol>
