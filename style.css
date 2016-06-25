@@ -1,0 +1,15 @@
+body{
+  color: yellow;
+  background-image: url("http://www.claypaky.it/media/news/images/mirage-magic-digital-lighting.jpg");
+}
+nav{
+ background-color: white;
+ width: 200px;
+ height: 100px;
+ margin: 20px;
+ padding-top: 3px;
+ padding-right: 15px;
+ color: green;
+ border: 2px orange;
+ float: right;
+}
