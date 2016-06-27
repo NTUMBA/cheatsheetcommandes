@@ -39,6 +39,9 @@ margin-right: 40%;
   .ttle{
     text-align: center;
   }
+  img{
+    width: 200px;
+  }
 .syst{
   border:5px orange;
   background-color: #ffff00;
