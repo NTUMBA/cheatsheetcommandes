@@ -71,7 +71,7 @@ margin-right: 60%;
     padding-right: 4%;
     padding-bottom: 1%;
     padding-top: 1%;
-}
+}/*Utilisation de raccourci*/
 
 .ttr{
   color:deeppink;
@@ -89,9 +89,10 @@ margin-right: 60%;
 a{
   color: yellow;
   font-size: 30px;
-}
+}/*s'applique à tout lien*/
 @media screen and (max-width: 1290px) {
             nav{
               display: none;
             }
 }
+/*Objectif: rendre la page responsive: sous la barre de 1290px la table de matières disparait de l'écran*/
